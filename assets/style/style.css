@@ -1,1 +1,49 @@
 /* BASIC STYLES HERE */
+.header{
+  background-color: rgb(145, 32, 251);
+  height: 7vh;
+}
+
+.stickynote{
+  height: 400px;
+  width: auto;
+  
+
+}
+
+.topspace{
+  height: 35vh;
+}
+
+
+.margin{
+  margin-top: 15%;
+  margin-right: 10%;
+}
+
+.flex{
+  align-items: center;
+}
+
+@media only screen and (max-width: 770px) {
+
+  .margin{
+    margin-top: 0%;
+    margin-right: 3%;
+    margin-left: 3% ;
+  }
+
+  .fonts{
+font-size: small;
+  }
+
+  .flex{
+    align-items: center;
+  }
+  .stickynote{
+    height: auto;
+    width: 60%;
+    
+  
+  }
+}

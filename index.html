@@ -8,7 +8,6 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>trivia</title>
@@ -16,32 +15,71 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">trivia</span>
-      </a>
-    </nav>
+    <div class="header">
+
+    </div>
   </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+  <main class=" bg-dark">
+    <div class="container-fluid bg-dark">
+      <div class="row flex  justify-content-end ">
+        <div class="col-md-3 d-flex  justify-content-center">
+          <img class="stickynote" src="assets\img\large_news996121_1035119.png" alt="">
+        </div>
+        <div class="col-md-9 ">
+          <div id="app">
+            <div class=" "></div>
+            <div class="card margin bg-light shadow">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title">Movies Trivia Questions!</h3>
+                  <h5 class="fonts" id="streak"> Winning Streak: 0</h5>
+                  <h5 class="fonts" id="highest"> Highest Streak: 0</h5>
+                </div>
+                <h6 class="mb-4 mt-2 fst-italic fw-normal">Answer with TRUE or FALSE:</h6>
+                <p id="trivia" class="card-text"></p>
+                <form type="submit" onsubmit="app.triviaController.submitAnswer()">
+                  <div class=" form-check">
+                    <input class="form-check-input" type="radio" name="1" value="True" id="answer_user" required>
+                    <label class="form-check-label" for="flexRadioDefault1" checked>
+                      <p class=""><b>True</b></p>
+                    </label>
+                  </div>
+                  <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="1" value="False" id="answer_user">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      <p><b>False</b></p>
+                    </label>
+                  </div>
+                  <div class="text-end">
+                    <button class=" btn btn-primary mt-2 ">Confirm</button>
+                  </div>
+                </form>
+                <div class="text-end">
+                  <button class=" btn btn-primary mt-2 visually-hidden"
+                    onclick="app.triviaController.skip()">Skip</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
+    </div>
   </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
+  <footer class=" d-flex header align-items-center justify-content-end text-light">
+    <div class="text-end no-select">
+      <p><small>Made with ❤ by John Melo | Codeworks</small></p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.js"
+    integrity="sha512-RT3IJsuoHZ2waemM8ccCUlPNdUuOn8dJCH46N3H2uZoY7swMn1Yn7s56SsE2UBMpjpndeZ91hm87TP1oU6ANjQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 
